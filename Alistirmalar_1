@@ -1,0 +1,189 @@
+#Alıştırma 1
+x,y,total=0,19,0
+while (3*x+19)<=202:
+    x=x+1
+    total=total+3*x+19
+print(total)
+
+#Alıştırma 2
+x=0
+alpha=0
+while x<1000000:
+    x=x+1
+    alpha=alpha+(1/x**2)
+print((6*alpha)**0.5)
+
+#Alıştırma 3
+import math
+x=0
+alpha=0
+while x<1000:
+    alpha=alpha+(1/(math.factorial(x)))
+    x=x+1
+print(alpha)
+
+#Alıştırma 4
+i=100
+while i<1000:
+    if str(i)[0]==str(i)[-1]:
+        print(i)
+    i=i+1
+
+#Alıştırma 5
+i=1000
+while i<10000:
+    if str(i)[0]+str(i)[1]==str(i)[-1]+str(i)[-2]:
+        print(i)
+    i=i+1
+
+#Alıştırma 6
+i=1000
+count=0
+while i<10000:
+    if int(str(i)[0])>int(str(i)[-1]):
+        count=count+1
+    i=i+1
+print(count)
+
+#Alıştırma  7
+i=100
+count=0
+while i<1000:
+    if int(str(i)[0])+int(str(i)[1])==int(str(i)[-1]):
+        count=count+1
+    i=i+1
+print(count)
+
+#Alıştırma  8
+i=100
+count=0
+x,zeus,poseidon=0,[],[]
+for x in range(100,1000,2):
+    zeus.append(x)
+    poseidon.append(x)
+for zed in zeus:
+    big_zed=str(zed)
+    little_zed=[]
+    little_zed.append(big_zed[0])
+    little_zed.append(big_zed[1])
+    little_zed.append(big_zed[2])
+    for pie in poseidon:  
+        big_pie=str(pie)
+        little_pie=[]
+        little_pie.append(big_pie[0])
+        little_pie.append(big_pie[1])
+        little_pie.append(big_pie[2])
+        count2=0
+        for zeds in little_zed:
+            if zeds==little_pie[0] or zeds==little_pie[1] or zeds==little_pie[2]:
+                count2=count2+1
+        if count2>1:
+            count=count+1
+print(count)
+
+#Alıştırma  9
+for x in range(1,1000,1):
+    if len(str(x))==1:
+        if x<9:
+            print(x,end=' ')
+    elif len(str(x))==2:
+        if int(str(x)[0])+int(str(x)[1])<9:
+            print(x,end=' ')
+    elif int(str(x)[0])+int(str(x)[1])+int(str(x)[2])<9:
+        print(x,end=' ')
+print(' ')
+        
+#Alıştırma 10
+i=10000
+count=0
+while i<100000:
+    if int(str(i)[0])==int(str(i)[-1])and int(str(i)[1])==int(str(i)[-2]):
+        count=count+1
+    i=i+1
+print(count)
+
+#Alıştırma 11
+G=0
+for i in range(1,125,1):
+    if 125%i==200%i==350%i:
+        G=i
+print(G)
+
+#Alıştırma 12
+for i in range(1000,2005,1):
+    if (int(str(i)[0])+int(str(i)[1])+int(str(i)[2])+int(str(i)[3]))==2005-i:
+        print(i)
+
+#Alıştırma 13
+for i in range(10,100,1):
+    for b in range(10,100,1):
+        if int(str(i)+str(b))==11*(i+b):
+            print(i, b)
+
+#Alıştırma 14
+B=121213
+check=0
+testudo=[]
+phalanx=[]
+Sshield, Sspear=0, 0
+for i in range(1,121213):
+    if 121212%(i)==0:
+        testudo.append(i)
+        phalanx.append(i)
+for shield in testudo:
+    for spear in phalanx:
+        if shield*spear==121212:
+            check=abs(shield-spear)
+            if check<B:
+                B=check
+                Sshield=shield
+                Sspear=spear
+print(Sshield, Sspear)
+
+#Alıştırma 15
+checker=False
+for i in range (10000,100000,1):
+    if i%2==0:
+        continue
+    elif i%3==0:
+        continue
+    elif i%5==0:
+        continue
+    for j in range(7,i):
+        if i%j==0:
+            checker=True
+            break
+    if checker==True:
+        checker=False
+        continue
+    else:
+        print(i)
+
+#Alıştırma 16
+checker=False
+x=int(input('Bir sayı giriniz:'))
+for i in range(2,x):
+    if x%i==0:
+        continue
+    else:
+        checker=True
+if checker==True:
+    print(x,'Asaldır')
+else:
+    print(x,'Asal değildir')
+
+
+#Alıştırma 17
+x=input('3 veya 4 basamaklı bir sayı giriniz: ')
+if len(x)==3:
+    if x[0]==x[2]:
+        print('Bu sayı palindromiktir.')
+    else:
+        print('Bu sayı palindromik değildir.')
+elif len(x)==4:
+    if x[0]==x[3] and x[1]==x[2]:
+        print('Bu sayı palindromiktir.')
+    else:
+        print('Bu sayı palindromik değildir.')
+else:
+    print('Girdiğiniz değer parametrelere uymuyor.')
